@@ -1,0 +1,112 @@
+#first-name{
+    position: relative;
+    width: 145%;
+   
+}
+#last-name{
+    position: absolute;
+    right: -1%;
+    width: 45%;
+} 
+
+#postal-code{
+    width: 145%;
+}
+#city{
+    position: absolute;
+    width: 45%;
+    right: -1%;
+} 
+#email{
+    position: absolute;
+    top: 22%;
+    width: 100%;
+}
+
+.inputClass{
+    background-color: #FAFAFA;
+    height: 40px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    margin: 10px 0;
+}
+.inputClass::placeholder{
+    color: #737373;
+    font-size: 14px;
+    font-family: 'Inter', 'sans-serif';
+}
+.inputClass:focus{
+    outline: none;
+    font-size: 14px;
+}
+
+
+@media (max-width: 375px){
+    #email{
+        top: 24%;
+        margin-bottom: 20px;
+    }
+    #first-name{
+        width: 100%;
+    }
+    #last-name{
+        position: static;
+        width: 100%;
+    }
+    #city{
+        position: static;
+        width: 100%;
+    }
+    #postal-code{
+        width: 100%;
+    }
+    
+}
+@media (min-width: 1640px){
+    #email{
+        top: 22%;
+        margin-bottom: 20px;
+        width: 100%;    
+    }
+    #first-name{
+        width: 175%;
+    }
+    #last-name{
+        position: absolute;
+        width: 55%;
+        right: -1%;
+    }
+    #city{
+        position: absolute;
+        width: 55%;
+        right: -1%;
+    }
+    #postal-code{
+        width: 145%;
+    }
+    
+}
+@media (min-width: 1915px){
+    #email{
+        top: 20%;
+        margin-bottom: 20px;
+        width: 100%;    
+    }
+    #first-name{
+        width: 175%;
+    }
+    #last-name{
+        position: absolute;
+        width: 55%;
+        right: -1%;
+    }
+    #city{
+        position: absolute;
+        width: 55%;
+        right: -1%;
+    }
+    #postal-code{
+        width: 145%;
+    }
+    
+}
