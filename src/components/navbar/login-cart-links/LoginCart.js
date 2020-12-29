@@ -6,7 +6,11 @@ const LoginCart = (props) => {
         <div className='login-cart-container'>
                 <li>Contact</li>
                 <li>Sign in</li>
-                <li onClick={props.toggleCart}>Cart</li>
+                <div className='cart-nav-div'>
+                    <span className='notification'>2</span>
+                    <li onClick={props.toggleCart}>Cart</li>
+                </div>
+                
         </div>
     );
 };

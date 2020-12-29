@@ -4,7 +4,7 @@ import ProductDesription from './product-description/ProductDesription';
 import ProductImages from './product-images/ProductImages';
 import Related from '../../containers/related-container/RelatedContainer';
 import Navbar from '../../components/navbar/Navbar';
-
+import Loading from '../../UI/loading/Loading';
 
 const SingleProductPage = (props) => {
     
@@ -26,6 +26,11 @@ const SingleProductPage = (props) => {
                 />
             </div>
      )
+ }else{
+     productData = (
+         <div className='loading-spinner'><Loading/></div>
+        
+        )
  }
     
     

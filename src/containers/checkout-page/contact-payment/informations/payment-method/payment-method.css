@@ -46,6 +46,22 @@
     width: 116px;
     border-radius: 4px;
 }
+.payment-provider{
+    font-weight: 400;
+    font-size: 19px;
+}
+@media (min-width: 1920px){
+    .payment-methods{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .method{
+       margin: 0 30px;
+    }
+}
 @media (min-width: 1640px){
     .method{
         width: 130px;
@@ -60,6 +76,7 @@
         width: 80%;
     }
 }
+
 @media (max-width: 375px){
     .payment-methods{
         display: flex;

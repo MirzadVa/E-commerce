@@ -3,37 +3,42 @@ import './category-page.css';
 import ProductCard from './product-card/ProductCard';
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
-
+import Loading from '../../UI/loading/Loading';
 
 
 
 const CategoryPage = (props) =>{
     
+        let productCard;
 
-
-       let productCard = (
-            props.data.map(product => {
-
-                return (
-                <ProductMenuItem key={product.id}>
-                    <Link to={`/product/${product.id}`} style={{textDecoration: 'none'}}>
-                        <ProductCard  
-                            name={product.name} 
-                            productImage={product.mainImage} 
-                            price={product.price}/>
-                    </Link> 
-                </ProductMenuItem>
-            )})
-            
-        )
+        if(props.data.length > 0){
+            productCard = (
+                props.data.map(product => {
+    
+                    return (
+                    <ProductMenuItem key={product.id}>
+                        <Link to={`/product/${product.id}`} style={{textDecoration: 'none'}}>
+                            <ProductCard  
+                                name={product.name} 
+                                productImage={product.mainImage} 
+                                price={product.price}/>
+                        </Link> 
+                    </ProductMenuItem>
+                )})
+                
+            )
+        }
+       
     return (
         <div className='category-page-container'>
                 
                 <h1 className='category-headline'>{(parseInt(props.params, 10)) === 1 ? 'Men' : 'Women'}</h1>
+                <div className={props.data.length > 0 ? 'hide' : 'loading-spinner'}>
+                   <Loading />
+                </div>
                 
                 <div className='product-cards-container'>
-                    {productCard}
-                    
+                    {productCard} 
                 </div>
 
         
@@ -50,8 +55,6 @@ const ProductMenuItem = styled.div`
       
     }
     
-
-
     &:nth-child(2n+2) {
         margin-top: 30%;
     }

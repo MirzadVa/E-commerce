@@ -3,12 +3,14 @@ import './confirm.css';
 import OrderButton from '../../../../../../UI/grey-button/GreyButton';
 import Axios from 'axios';
 import Cart from '../../../../cart/PaymentCart';
+import Loading from '../../../../../../UI/loading/Loading';
 
 class Confirm extends Component {
     
     
     state = {
-        orderComplete : false
+        orderComplete : false,
+        loading: true
     }
     
     completeOrder = () =>{
@@ -25,6 +27,11 @@ class Confirm extends Component {
         this.setState({
             orderComplete : true
         })
+        setTimeout(() =>{
+            this.setState({
+                loading: false
+            })
+        }, 1500)
     
     }
     render() {
@@ -52,8 +59,14 @@ class Confirm extends Component {
                 </div>
 
                 <div className={this.state.orderComplete ? 'order-complete' : 'hide'}>
-                    <p>Thank you for your order!</p>
-                    <p>The order will be processed within next 48 hours.</p>
+                    {this.state.loading ? <div className='loading-spinner'><Loading /></div> : 
+                    <div>
+                        <p>Thank you for your order!</p>
+                        <p>The order will be processed within next 48 hours.</p>
+                    </div>
+                    
+                    }
+                    
                 </div>
             </div>
         );

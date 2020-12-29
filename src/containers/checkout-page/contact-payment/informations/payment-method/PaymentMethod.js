@@ -49,14 +49,15 @@ class PaymentMethod extends Component{
     render(){
         
         const style = {
-            float : 'right',
-            marginTop: '30px'
+            float:"right",
+            marginTop: '30px',
         }
 
         return (
             <div className='payment-container'>
                 <div className='payment-method-container'>
                     <div className={this.props.showConfirm ? 'hide' : null}>
+                        <p className='payment-provider'>Payment provider</p>
                         <div className='payment-methods'>
                             {this.state.paymentMethods.map(elem =>(
                                 <div className={elem.active ? 'method active-method' : 'method'} key={elem.id} alt="">

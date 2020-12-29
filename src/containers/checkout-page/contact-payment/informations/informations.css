@@ -17,8 +17,8 @@
     display: none;
 }
 .info-logo{
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 100px;
 }
 .checkout-nav{
     margin-bottom: 80px;
@@ -89,7 +89,15 @@
     display: inline-block;
 }
 
-
+@media(min-width: 1920px){
+    .info-logo{
+        height: 150px;
+        width: 150px;
+    }
+    .check-item{
+        font-size: 24px;
+    }
+}
 
 @media (max-width: 375px){
     .info-text-container{

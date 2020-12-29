@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
+    padding-bottom: 50px;
 }
 .related-item{
     height: 350px;

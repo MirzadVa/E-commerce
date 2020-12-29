@@ -4,6 +4,7 @@
     list-style-type: none;
     padding: 0 12px;
     cursor: pointer;
+    font-weight: normal;
 }
 #cart{
     position: relative;
@@ -23,7 +24,28 @@
     justify-content: center;
     align-items: center;   
 }
-
+.cart-nav-div{
+    display: inline-block;
+    position: relative;
+}
+.notification{
+    position: absolute;
+    display: block;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    /* height: 1px;
+    width: 1px; */
+    background-color: #4F4F4F;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 8px;
+    top: -72%;
+    left: -5%;
+}
 @media (max-width: 600px){
     .login-cart-container{
         display: flex;

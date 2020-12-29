@@ -46,15 +46,23 @@ let successBox;
                     </li>
                     <li>-Ribbed cuff</li>
                 </ul>
+                <p className='product-description second'>32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable</p>
+                <p className='product-description second'>Back length of size XS/S is 70cm</p>
             </div>
-             <p className='product-description2'>{props.data[0].description}</p>
+             {/* <p className='product-description2'>{props.data[0].description}</p> */}
                     <div className='cart-button'>
                         <CartButton 
                             name='Add to cart' 
                             buttonClick={props.addToCart}
                             buttonId="cart-button"/>
                     </div>
-            
+                <p className='product-description third'>32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable</p>
+                
+                <p className='product-description '>
+                Make sure that your favourite items remain long-loved pieces for years 
+                to come; read our product care guide and explore our selection of carefully 
+                chosen care products.
+                </p>
             {successBox}
         </div>
     );
@@ -63,3 +71,9 @@ let successBox;
 
 
 export default ProductDesription;
+
+/*32% Polyamide / 29% Viscose / 23% Silk / 15% Cotton / 1% Elastane / Machine washable
+
+
+Product No:
+0930647001  */
